@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Candlestick Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #chart-container {
+        flex: 2;
+      }
+
+      #pie-container {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart-container">
+      <div id="chart"></div>
+    </div>
+    <div id="pie-container">
+      <div id="pie"></div>
+    </div>
+    <script>
+      const chartData = {{ chart_data | safe }};
+      const pieData = {{ pie_data | safe }};
+      Plotly.newPlot('chart', chartData.data, chartData.layout);
+      Plotly.newPlot('pie', pieData.data, pieData.layout);
+    </script>
+  </body>
+</html>
