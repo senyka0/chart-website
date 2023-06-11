@@ -8,14 +8,14 @@ Before running the script, make sure you have the following requirements:
 * pandas library ```pip install pandas```
 ## Getting Started
 1. Clone the repository.
-2. Open the sdata_collection.py in a text editor.
+2. Open ``data_collection.py``` in a text editor.
 3. Modify the interval and symbol variables.
 ```sh
 symbol = "BTCUSDT" # your symbol
 interval = "1d" # your interval (1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 8h, 12h, 1d, 3d, 1w, 1M)
 ```
 4. Save the changes.
-5. Open a terminal and navigate to the directory where the data_collection.py script is located.
+5. Open a terminal and navigate to the directory where ```data_collection.py``` script is located.
 6. Run ```python data_collection.py``` to execute the script:
 ## To collect data at regular intervals
 Using cron job on Linux server:
